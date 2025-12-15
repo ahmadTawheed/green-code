@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Code</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #059669; 
+            --text-color: #263238; 
+            --bg-color-header: #ffffff; 
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --button-bg: #E4E6EB;
+            --button-hover-bg: #e4e6eba5; 
+            --separator-color: #ccc; 
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "Cairo", sans-serif;
+            text-decoration: none;
+        }
+
+        /* Header - Navbar */
+        header {
+            direction: rtl;
+            width: 100%;
+            height: 80px;
+            background-color: var(--bg-color-header);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: var(--shadow-color) 0px 10px 20px, var(--shadow-color) 0px 6px 6px;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        /* Navbar - Computer */
+        nav {
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s linear;
+            font-size: 1.2rem;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            right: 0;
+            background-color: var(--bg-color-header);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 5px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-5px); 
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .dropdown-content a {
+            color: var(--text-color) !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block !important;
+            border-bottom: none !important;
+            transition: background-color 0.3s;
+            font-size: 1rem !important;
+        }
+
+        .dropdown-content a:hover {
+            background-color: var(--button-bg);
+            color: var(--primary-color) !important;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0); 
+        }
+
+        /* Style for links and profile */
+        .controls-and-profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        header button {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            background-color: var(--button-bg);
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        header button:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        header button i {
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+        
+        header .lang-button {
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-left: 10px;
+            border: 3px solid var(--primary-color);
+            cursor: pointer;
+        }
+
+
+        /* Reposive */
+        /* Hide Menu */
+        .menu-icon {
+            display: none;
+        }
+
+        /*  Side Menu  */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            max-width: 80%;
+            height: 100%;
+            background-color: var(--bg-color-header);
+            z-index: 100;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+            transform: translateX(-100%); 
+            transition: transform 0.4s ease-in-out; 
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            direction: rtl;
+        }
+
+        .side-menu.open {
+            transform: translateX(0); 
+        }
+        
+        .side-menu-header {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-color);
+            padding: 0;
+        }
+
+        .side-menu-nav ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu-nav ul li a {
+            font-size: 1.1rem;
+            padding: 10px 0;
+            width: 100%;
+            display: block;
+            color: var(--text-color);
+        }
+
+        .side-menu-nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .side-menu-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 5px 0;
+        }
+        
+        .side-menu-profile img {
+            width: 45px;
+            height: 45px;
+            border: 2px solid var(--primary-color);
+            margin-left: 0;
+            border-radius: 50%;
+        }
+
+        .side-menu-profile span {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .side-menu-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            padding-top: 15px;
+            
+        }
+        .side-menu-buttons button {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            background-color: var(--button-bg);
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .side-menu-buttons button:hover {
+            background-color: var(--button-hover-bg);
+        }
+
+        .side-menu-buttons button i {
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        /* hr */
+        .separator {
+            height: 1px;
+            background-color: var(--separator-color);
+            margin: 15px 0;
+        }
+
+        /* cover */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 90;
+        }
+        .overlay.active {
+            display: block;
+        }
+
+
+        /* Phone (Media Queries) */
+        @media (max-width: 768px) {
+            header {
+                justify-content: space-between;
+                padding: 0 15px;
+            }
+
+            nav, .controls-and-profile {
+                display: none !important;
+            }
+
+            .menu-icon {
+                display: block;
+                order: 2;
+                margin-right: auto; 
+                
+                background-color: var(--button-bg);
+                width: 45px;
+                height: 45px;
+                border-radius: 8px;
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background-color 0.3s;
+            }
+            
+            .menu-icon:hover {
+                background-color: var(--button-hover-bg);
+            }
+            
+            header > h1 {
+                order: 1;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1>زراع</h1>
+        
+        <button class="menu-icon" id="openMenuBtn"><i class="bi bi-list"></i></button>
+
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="#interactors">الترتيب</a></li>
+                <li><a href="#removeAds">إزالة الاعلانات</a></li>
+                
+                <li class="dropdown">
+                    <a href="#more">المزيد</a>
+                    <div class="dropdown-content">
+                        <a href="#about">من نحن</a>
+                        <a href="#contact">تواصل معنا</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="controls-and-profile">
+            <div class="header-buttons">
+                <button><i class="bi bi-bell-fill"></i></button>
+                <button><i class="bi bi-moon-fill"></i></button>
+                <button class="lang-button">EN</button>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="profile">
+        </div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+        
+        <div class="side-menu-header">
+            <button class="close-btn" id="closeMenuBtn"><i class="bi bi-x-lg"></i></button>
+        </div>
+
+        <div class="side-menu-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="profile">
+            <span>الملف الشخصي</span>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <div class="side-menu-nav">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="#interactors">الترتيب</a></li>
+                <li><a href="#removeAds">إزالة الاعلانات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </div>
+        
+        <div class="separator"></div>
+
+        <div class="side-menu-buttons">
+            <button><i class="bi bi-moon-fill"></i></button>
+            <button class="lang-button">EN</button>
+            <button><i class="bi bi-bell-fill"></i></button>
+        </div>
+        
+    </div>
+    
+    <div class="overlay" id="menuOverlay"></div>
+
+    <script>
+        //  Controle =>  (Side Menu)
+        const openMenuBtn = document.getElementById('openMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const sideMenu = document.getElementById('sideMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        // function to open menu
+        function openMenu() {
+            sideMenu.classList.add('open');
+            menuOverlay.classList.add('active');
+
+            document.body.style.overflow = 'hidden';
+        }
+
+        // function to close menu
+        function closeMenu() {
+            sideMenu.classList.remove('open');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        openMenuBtn.addEventListener('click', openMenu);
+
+        closeMenuBtn.addEventListener('click', closeMenu);
+
+        menuOverlay.addEventListener('click', closeMenu);
+        
+        const sideMenuLinks = document.querySelectorAll('.side-menu-nav a');
+        sideMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+        
+    </script>
+</body>
+</html>
