@@ -1,0 +1,218 @@
+ :root {
+    /* text-color */
+    --text-primary-color: #059669;
+    --text-ul-navbar: #263238;
+    --text-scondray: #263238;
+    --text-area: #263238;
+    --text-time: #ccc;
+    /* border-color */
+    --border-primary-color: #059669;
+    /* bg-color */
+    --bg-btn-color: #059669;
+    --bg-bid-card: #ffffff;
+    --bg-body: #F7F9FA;
+    --bg-menu-icon: #E4E6EB;
+    --bg-navbar-icon: #E4E6EB;
+    --bg-dropDown-hover-: #ffffff;
+    --bg-textareat-color: #F7F9FA;
+    /* bg-color-hover */
+    --button-hover-bg: #e4e6eba5; 
+    /* icon-color */
+    --icon-color-navbar: #263238;
+    /* line-color */
+    --line-separator: #ccc;
+    /* box-shadow */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ }        
+body.dark {
+    /* text-color */
+    --text-primary-color: #059669;
+    --text-ul-navbar: #ffffff;
+    --text-scondray: #ffffff;
+    --text-area: #ffffff;
+    --text-time: #ffff;
+    /* border-color */
+    --border-primary-color: #059669;
+    /* bg-color */
+    --bg-bid-card: #1F2A38;
+    --bg-body: #111826;
+    --bg-menu-icon: #374152;
+    --bg-navbar-icon: #374152;
+    --bg-textareat-color: #374152;
+    /* bg-color-hover */
+    --button-hover-bg: #e4e6eba5; 
+    /* icon-color */
+    --icon-color-navbar: #E4E6EB;
+    /* line-color */
+    --line-separator: #ccc;
+    /* box-shadow */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* article  */
+article {
+    direction: rtl;
+    width: 80%;
+    margin: auto;
+    background-color: var(--bg-bid-card);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 25px 35px;
+    margin-top: 4rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+/* data profile  */
+article .data-profile {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 15px;
+    margin-bottom: 1.1rem;
+}
+article .data-profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-primary-color);
+}
+article .data-profile .info-profile {
+    margin-top: 5px;
+    line-height: 22px;
+}
+article .data-profile .info-profile h3 {
+    color: var(--text-primary-color);
+    cursor: pointer;
+}
+article .data-profile .info-profile time {
+    color: var(--text-time);
+    font-size: 12px;
+}
+article .data-profile span {
+    background-color: var(--border-primary-color);
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 12px;
+}
+article .data-profile h3 {
+    color: var(--text-primary-color);
+    cursor: pointer;
+}
+/* content article  */
+article p {
+    color: var(--text-scondray);
+    line-height: 28px;
+}
+article .line {
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+    background-color: var(--line-separator);
+}
+/* interactive  */
+.inter-action {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+.inter-action .comments, .likes, .share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.share i {
+    color: var(--text-primary-color);
+}
+.comments i {
+    color: var(--text-primary-color);
+}
+.likes i {
+    color: var(--text-primary-color);
+}
+.comments span,p {
+    color: var(--text-scondray);
+}
+.likes span,p {
+    color: var(--text-scondray);
+}
+.share span,p {
+    color: var(--text-scondray);
+}
+/* show more  */
+article .show-more {
+    background-color: var(--bg-btn-color);
+    color: #ffffff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+article .show-more:hover {
+    background-color: #047857;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* article  */
+article {
+    width: 90%;
+}
+/* data profile  */
+
+article .data-profile img{
+    width: 40px;
+    height: 40px;
+}
+article .data-profile .info-profile h3 {
+    font-size: 0.9rem;
+}
+article .data-profile .info-profile time {
+    font-size: 10px;
+}
+article .data-profile span {
+    width: 8px;
+    height: 8px;
+}
+article .data-profile h3 {
+    font-size: 0.9rem;
+}
+/* content article  */
+article p {
+    font-size: 13px;
+}
+/* interactive  */
+.inter-action {
+    justify-content: center;
+}
+.inter-action .comments, .likes, .share {
+    gap: 5px;
+}
+.comments span,p {
+    font-size: 0.8rem;
+}
+.likes span,p {
+    font-size: 0.8rem;
+    
+}
+.share span,p {
+    font-size: 0.8rem;
+
+}
+article .show-more {
+    font-size: 0.8rem;
+}
+}
