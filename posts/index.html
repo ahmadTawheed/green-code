@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Code</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Google Fonts Cairo  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./css/styleNavbar.css">
+    <link rel="stylesheet" href="./css/styleCreatePost.css">
+    <link rel="stylesheet" href="./css/styleArticlePost.css">
+    <link rel="stylesheet" href="./css/styleUpPost.css">
+    <link rel="stylesheet" href="./css/styleSkelton.css">
+    <!-- CSS Animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <header id="header">
+        <h1>زراع</h1>
+        <button class="menu-icon" id="openMenuBtn"><i class="bi bi-list"></i></button>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="#interactors">الترتيب</a></li>
+                <li><a href="#removeAds">إزالة الاعلانات</a></li>
+                <li class="dropdown">
+                    <a href="#more">المزيد</a>
+                    <div class="dropdown-content">
+                        <a href="#about">من نحن</a>
+                        <a href="../contactUs/index.html">تواصل معنا</a>
+                        <a href="../aiChat/index.html">المساعد الذكي</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="controls-and-profile">
+            <div class="header-buttons">
+                <a href="#createPost"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+                <a href="#notification"><button><i class="bi bi-bell-fill"></i></button></a>
+                <button class="theme-toggle" id="themeToggle"><i class="bi bi-moon-fill"></i></button>
+                <button class="lang-button">EN</button>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+        </div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+
+        <div class="side-menu-header">
+            <button class="close-btn" id="closeMenuBtn"><i class="bi bi-x-lg"></i></button>
+        </div>
+
+        <div class="side-menu-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+            <span>الملف الشخصي</span>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="side-menu-nav">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="#interactors">الترتيب</a></li>
+                <li><a href="#removeAds">إزالة الاعلانات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="../contactUs/index.html">تواصل معنا</a></li>
+                <li><a href="../aiChat/index.html">المساعد الذكي</a></li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="side-menu-buttons">
+            <button class="theme-toggle-phone" id="themeToggle-phone"> <i class="bi bi-moon-fill"></i> </button>
+            <button class="lang-button">EN</button>
+            <a href="#notification"><button><i class="bi bi-bell-fill"></i></button></a>
+            <a href="#createPost"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+        </div>
+
+    </div>
+    <div class="overlay" id="menuOverlay"></div>
+    <!-- End Navbar -->
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- Start Section Create Post -->
+    <section id="createPost" data-aos="fade-up">
+        <form action="#" method="post">
+
+            <textarea name="titlePost" id="titlePost" rows="3" placeholder="شارك معلوماتك الزراعية أو سؤالك هنا"
+                required></textarea>
+
+            <input type="text" name="tagPost" id="tagePost" placeholder="إضافة وسم ، مثلا أمراض النبات" required>
+
+            <select name="chooseType" id="chooseType" required>
+                <option value="information">معلومة</option>
+                <option value="question">سؤال</option>
+            </select>
+
+            <div class="container-imgs" id="imageContainer">
+            </div>
+            <p id="limitMessage" style="display: none;">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+                يمكنك إضافة 10 صور كحد أقصي / قريبا يمكنك إضافة فيديوهات
+            </p>
+            <!-- Advice -->
+            <!-- 1 -->
+            <p class="advice-photo">
+                <i class="bi bi-check-circle-fill"></i>
+                التقط صوراً واضحة وعالية الدقة في ضوء النهار الطبيعي لتفاصيل الإصابة.
+            </p>
+            <!-- 2 -->
+            <p class="advice-photo">
+                <i class="bi bi-check-circle-fill"></i>
+                صور أجزاء النبات المصابة والسليمة معاً لإظهار التباين ومدى انتشار المرض.
+            </p>
+            <!-- 3 -->
+            <p class="advice-photo">
+                <i class="bi bi-check-circle-fill"></i>
+                أرفق وصفاً مختصراً لنوع المحصول وعمر النبات وأي مبيدات استُخدمت مؤخراً.
+            </p>
+            <!-- 4 -->
+            <p class="advice-photo">
+                <i class="bi bi-check-circle-fill"></i>
+                قدم توصيات فنية متكاملة تشمل طرق الوقاية، المكافحة الحيوية، والجرعات المناسبة للمبيدات.
+            </p>
+            <!-- 5 -->
+            <p class="advice-photo">
+                <i class="bi bi-check-circle-fill"></i>
+                استخدم لغة بسيطة ومفهومة تجمع بين المصطلحات العلمية والدارجة لتصل المعلومة لكل مزارع.
+            </p>
+            <div class="btns-add">
+                <button class="add">نشر</button>
+                <button class="add-photo">
+                    <input class="up-load-img" type="file" id="fileInput" accept=".jpg, .png, .jpeg" multiple>
+                    <i class="bi bi-images"></i>
+                </button>
+            </div>
+
+      
+        </form>
+    </section>
+    <!-- END Section Create Post -->
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- Start Articles Create Post -->
+    <div id="posts-wrapper">
+    <article data-aos="fade-up">
+        <div class="data-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="profile">
+            <div class="info-profile">
+                <h3>أحمد محمد</h3>
+                <time>منذ ساعتين</time>
+            </div>
+            <span></span>
+            <h3 id="follow">متابعة</h3>
+        </div>
+        <div class="classi-tag">
+            <p class="article-classi"><i class="bi bi-check-circle-fill"></i> <span>معلومة</span> </p>
+            <p class="article-classi"><i class="bi bi-tags-fill"></i> <span>أمراض نبات</span> </p>
+        </div>
+        <p>جاري تحميل المحتوى...</p>
+        <span class="line"></span>
+        <div class="inter-action">
+            <div class="comments"><i><i class="bi bi-chat-dots-fill"></i></i><span>0</span><p>تعليق</p></div>
+            <div class="likes"><i><i class="bi bi-heart-fill"></i></i><span>0</span><p>إعجاب</p></div>
+            <div class="share"><i><i class="bi bi-share-fill"></i></i><span>0</span><p>مشاركة</p></div>
+        </div>
+        <button class="show-more">عرض المزيد</button>
+    </article>
+</div>
+    <!-- End Articles Create Post -->
+    <!-- ---------------------------------------------------------------------------------- -->
+
+    <div class="up-post" data-aos="fade-right">
+        <a href="#createPost">
+            <button class="btn"><i class="bi bi-pencil-fill"></i></button>
+        </a>
+        <a href="#createPost">
+            <button class="btn"><a href="#header"><i class="bi bi-caret-up-fill"></i></button>
+        </a>
+    </div>
+
+    <!-- chat Ai  -->
+    <a href="../aiChat/index.html" class="btn-ai">
+    <button ><i class="bi bi-robot"></i></button>
+    </a>
+    <script src="./js/scriptNavbar.js"></script>
+    <script src="./js/darkMode.js"></script>
+    <script src="./js/scriptNavbar.js"></script>
+    <script src="./js/uploadPhoto.js"></script>
+    <script src="./js/scriptApiPost.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

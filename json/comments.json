@@ -1,0 +1,177 @@
+[
+  {
+    "id": 101,
+    "post_id": 1,
+    "content": "معلومة ممتازة، لكن هل الري بالتنقيط فعال بنفس الكفاءة في التربة الرملية؟",
+    "likes_count": 3,
+    "best_answer_votes": 1 
+  },
+  {
+    "id": 102,
+    "post_id": 1,
+    "content": "أوافق، أنا استخدم الري بالتنقيط منذ 5 سنوات ووفرت الكثير من المياه.",
+    "likes_count": 12,
+    "best_answer_votes": 15 
+  },
+  {
+    "id": 103,
+    "post_id": 2,
+    "content": "قد تكون إصابة باللفحة المبكرة (Early Blight). جرب استخدام مبيد نحاسي.",
+    "likes_count": 5,
+    "best_answer_votes": 8 
+  },
+  {
+    "id": 104,
+    "post_id": 2,
+    "content": "أنصحك بتقليل الري المسائي، هذا يساعد في الحد من انتشار الأمراض الفطرية.",
+    "likes_count": 2,
+    "best_answer_votes": 3
+  },
+  {
+    "id": 105,
+    "post_id": 2,
+    "content": "راجع أخصائي، فتشخيص أمراض الطماطم قد يكون صعبًا.",
+    "likes_count": 1,
+    "best_answer_votes": 1
+  },
+  {
+    "id": 106,
+    "post_id": 3,
+    "content": "زيت النيم كان حلاً سحرياً عندي! شكراً على التذكير.",
+    "likes_count": 9,
+    "best_answer_votes": 10 
+  },
+  {
+    "id": 107,
+    "post_id": 4,
+    "content": "عادةً ما يتم التسميد في الربيع والخريف. للنمو الخضري، تحتاج إلى جرعة أعلى من النيتروجين.",
+    "likes_count": 4,
+    "best_answer_votes": 2
+  },
+  {
+    "id": 108,
+    "post_id": 4,
+    "content": "يُفضل استخدام سماد متوازن (مثل 19-19-19) بمعدل 500 جرام لكل شجرة بالغة، ويتم تقسيمها على دفعات.",
+    "likes_count": 7,
+    "best_answer_votes": 12 
+  },
+  {
+    "id": 109,
+    "post_id": 4,
+    "content": "لا تنس إضافة العناصر الصغرى مع التسميد الأساسي.",
+    "likes_count": 3,
+    "best_answer_votes": 5
+  },
+  {
+    "id": 110,
+    "post_id": 5,
+    "content": "ما هي أنواع المبيدات الجهازية التي تنصح بها للبياض الدقيقي؟",
+    "likes_count": 2,
+    "best_answer_votes": 0
+  },
+  {
+    "id": 111,
+    "post_id": 5,
+    "content": "تقليل الرطوبة حول النباتات هو المفتاح الرئيسي للوقاية!",
+    "likes_count": 6,
+    "best_answer_votes": 18 
+  },
+  {
+    "id": 112,
+    "post_id": 6,
+    "content": "كلام سليم، السلامة لا تُقدر بثمن.",
+    "likes_count": 8,
+    "best_answer_votes": 2
+  },
+  {
+    "id": 113,
+    "post_id": 6,
+    "content": "أحب أن أضيف أهمية التخلص الآمن من عبوات المبيدات الفارغة.",
+    "likes_count": 1,
+    "best_answer_votes": 4
+  },
+  {
+    "id": 114,
+    "post_id": 7,
+    "content": "جرّب استخدام طفيل *Aphelinus*، فعال جداً ضد الحشرة القشرية في البيوت البلاستيكية.",
+    "likes_count": 10,
+    "best_answer_votes": 20 
+  },
+  {
+    "id": 115,
+    "post_id": 7,
+    "content": "هل هناك مورد موثوق لشراء المفترسات الحيوية؟",
+    "likes_count": 3,
+    "best_answer_votes": 5
+  },
+  {
+    "id": 116,
+    "post_id": 7,
+    "content": "خنفساء أبو العيد (Ladybug) أيضاً مفيدة للمكافحة الطبيعية.",
+    "likes_count": 5,
+    "best_answer_votes": 7
+  },
+  {
+    "id": 117,
+    "post_id": 7,
+    "content": "المكافحة الحيوية تتطلب صبراً، لكن نتائجها ممتازة على المدى الطويل.",
+    "likes_count": 1,
+    "best_answer_votes": 1
+  },
+  {
+    "id": 118,
+    "post_id": 8,
+    "content": "وكمية السماد العضوي يجب أن تكون محسوبة لتجنب حرق الجذور.",
+    "likes_count": 2,
+    "best_answer_votes": 1
+  },
+  {
+    "id": 119,
+    "post_id": 8,
+    "content": "أهمية التحلل الجيد للسماد قبل إضافته للتربة.",
+    "likes_count": 5,
+    "best_answer_votes": 9 
+  },
+  {
+    "id": 120,
+    "post_id": 9,
+    "content": "هذه الأعراض قد تكون بسبب نقص عنصر الزنك (Zinc deficiency).",
+    "likes_count": 6,
+    "best_answer_votes": 4
+  },
+  {
+    "id": 121,
+    "post_id": 9,
+    "content": "أنا أشك في الإصابة بالصدأ الأصفر (Yellow Rust). انظر أسفل الأوراق للتأكد من وجود جراثيم مسحوقية.",
+    "likes_count": 15,
+    "best_answer_votes": 25 
+  },
+  {
+    "id": 122,
+    "post_id": 9,
+    "content": "إذا كان الجو بارداً، قد تكون أعراض صقيع بسيطة.",
+    "likes_count": 1,
+    "best_answer_votes": 0
+  },
+  {
+    "id": 123,
+    "post_id": 9,
+    "content": "أرسل صوراً أوضح لحالة النبات ككل.",
+    "likes_count": 2,
+    "best_answer_votes": 1
+  },
+  {
+    "id": 124,
+    "post_id": 10,
+    "content": "وماذا عن المكافحة الميكانيكية؟ هل هي فعالة أم تستغرق وقتاً طويلاً؟",
+    "likes_count": 3,
+    "best_answer_votes": 3
+  },
+  {
+    "id": 125,
+    "post_id": 10,
+    "content": "المكافحة الكيميائية ضرورية في الزراعات الواسعة، ولكن يجب مراعاة فترة ما قبل الحصاد (PHI).",
+    "likes_count": 7,
+    "best_answer_votes": 11 
+  }
+]
