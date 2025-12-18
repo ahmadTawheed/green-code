@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="green code, agriculture, zra3, green, code, community, answer, question, plants">
+    <title>Green Code</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- Google Fonts Cairo  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- CSS Animation  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- email  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "aRINmdEP7QGFYuNc6",
+            });
+        })();
+    </script>
+    <script src="./js/scriptEmail.js"></script>
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <header id="header">
+        <!-- Logo -->
+        <h1>زراع</h1>
+        <button class="menu-icon" id="openMenuBtn"><i class="bi bi-list"></i></button>
+        <!-- NavBar-ul -->
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="#interactors">الترتيب</a></li>
+                <li><a href="#removeAds">إزالة الاعلانات</a></li>
+                <li class="dropdown">
+                    <a href="#more">المزيد</a>
+                    <div class="dropdown-content">
+                        <a href="#about">من نحن</a>
+                        <a href="#contact">تواصل معنا</a>
+                        <a href="../chat/index.html">المساعد الذكي</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- circle-icon -->
+        <div class="controls-and-profile">
+            <div class="header-buttons">
+                <a href="../posts/index.html"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+                <a href="#notification"><button><i class="bi bi-bell-fill"></i></button></a>
+                <button class="theme-toggle" id="themeToggle"><i class="bi bi-moon-fill"></i></button>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+        </div>
+    </header>
+    <!-- End-Navbar-for-Desktop -->
+
+    <!-- Start-Navbar-for-Phone -->
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <!-- close-btn -->
+            <button class="close-btn" id="closeMenuBtn"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <!-- profile -->
+        <div class="side-menu-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+            <span>الملف الشخصي</span>
+        </div>
+        <!-- line -->
+        <div class="separator"></div>
+        <!-- navbar-ul -->
+        <div class="side-menu-nav">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="#interactors">الترتيب</a></li>
+                <li><a href="#removeAds">إزالة الاعلانات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="../chat/index.html">المساعد الذكي</a></li>
+            </ul>
+        </div>
+        <!-- line -->
+        <div class="separator"></div>
+        <!-- circle-icon -->
+        <div class="side-menu-buttons">
+            <button class="theme-toggle-phone" id="themeToggle-phone"> <i class="bi bi-moon-fill"></i> </button>
+            <a href="#notification"><button><i class="bi bi-bell-fill"></i></button></a>
+            <a href="../posts/index.html"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+        </div>
+    </div>
+    <!-- bg-black -->
+    <div class="overlay" id="menuOverlay"></div>
+    <!-- End Navbar for Phone -->
+
+    <!-- Start section  -->
+    <section id="contact" class="contact-us" data-aos="fade-up">
+        <!-- title -->
+        <h2>تواصل معنا</h2>
+        <!-- form -->
+        <article>
+            <form>
+                <input type="text" name="name" id="name" placeholder="اسمك" required max="25" min="10" maxlength="30" minlength="6" autofocus>
+                <input type="email" name="email" id="email" placeholder="الايميل الخاص بك" required max="45" min="5" maxlength="50" minlength="50">
+                <input type="text" name="subject" id="subject" placeholder="الموضوع" required max="95" min="10" maxlength="100" minlength="100">
+                <textarea name="message" id="message" rows="3" placeholder="رسالتك" required maxlength="600" minlength="10"></textarea>
+                <button onclick="sendMail()" id="submit-btn" type="submit" class="comnt-show-more">إرسال رسالة</button>
+            </form>
+        </article>
+    </section>
+    <!-- End section  -->
+    <!-- ---------------------------------------------------------------------------------- -->
+    <!-- Script JS for Logic -->
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
