@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Notifications</title>
+
+    <!-- Cairo Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Light Mode */
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-nav: #ffffff;
+            --primary: #22c55e;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e5e7eb;
+        }
+
+        body.dark {
+            /* Dark Mode */
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-nav: #020617;
+            --primary: #22c55e;
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --border: #334155;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+
+        /* ================= Navbar ================= */
+        .navbar {
+            background-color: var(--bg-nav);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .mode-toggle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        /* ================= Page ================= */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .page-title span {
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+            display: inline-block;
+            border-radius: 2px;
+        }
+
+        /* ================= Notifications ================= */
+        .notification {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            transition: 0.3s;
+        }
+
+        .notification:hover {
+            transform: translateY(-3px);
+        }
+
+        .notification-content {
+            max-width: 75%;
+        }
+
+        .time {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .text {
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .btn {
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 7px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+            color: #022c22;
+        }
+
+        @media (max-width: 768px) {
+            .notification {
+                flex-direction: column;
+            }
+
+            .notification-content {
+                max-width: 100%;
+            }
+
+            .actions {
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark">
+
+<!-- ================= Navbar ================= -->
+<div class="navbar">
+    <div class="nav-links">
+        <a href="#">الرئيسية</a>
+        <a href="#">البحث</a>
+        <a href="#">الإشعارات</a>
+        <a href="#">الترتيب</a>
+        <a href="#">إزالة الإعلانات</a>
+        <a href="#">المزيد</a>
+    </div>
+
+    <div class="nav-right">
+        <button class="mode-toggle" id="modeBtn">☀️</button>
+    </div>
+</div>
+
+<!-- ================= Page ================= -->
+<div class="container">
+
+    <div class="page-title">
+        <h1>الإشعارات</h1>
+        <span></span>
+    </div>
+
+    <div class="notification">
+        <div class="notification-content">
+            <div class="time">منذ ساعتين</div>
+            <div class="title">إجابة جديدة على سؤالك</div>
+            <div class="text">
+                تمت إضافة إجابة جديدة على سؤالك حول مرض البياض الدقيقي في الطماطم.
+            </div>
+        </div>
+        <div class="actions">
+            <button class="btn">عرض الإجابة</button>
+            <button class="btn">تحديد كمقروء</button>
+        </div>
+    </div>
+
+    <div class="notification">
+        <div class="notification-content">
+            <div class="time">منذ ساعتين</div>
+            <div class="title">🎉 حصلت على شارة جديدة</div>
+            <div class="text">
+                لقد حصلت على شارة <strong>مساعد فعّال</strong>.
+            </div>
+        </div>
+        <div class="actions">
+            <button class="btn">عرض الشارة</button>
+            <button class="btn">تحديد كمقروء</button>
+        </div>
+    </div>
+
+    <div class="notification">
+        <div class="notification-content">
+            <div class="time">منذ ساعتين</div>
+            <div class="title">⭐ أفضل إجابة</div>
+            <div class="text">
+                إجابتك تم اختيارها كأفضل إجابة من قبل صاحب السؤال.
+            </div>
+        </div>
+        <div class="actions">
+            <button class="btn">عرض الإجابة</button>
+            <button class="btn">تحديد كمقروء</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= JS ================= -->
+<script>
+    const btn = document.getElementById("modeBtn");
+
+    btn.onclick = () => {
+        document.body.classList.toggle("dark");
+        btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    };
+</script>
+
+</body>
+</html>
