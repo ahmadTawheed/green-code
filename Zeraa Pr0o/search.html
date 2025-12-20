@@ -1,47 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Code</title>
-    <!-- Bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- Google Fonts Cairo  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- CSS File -->
-    <link rel="stylesheet" href="/styleSearch.css">
-    <link rel="stylesheet" href="/styleNavbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./styleNavbar.css">
+    <link rel="stylesheet" href="./styleSearch.css">
+    <link rel="stylesheet" href="./skelton.css">
 </head>
-
-<body class="light">
+<body class="dark">
+    <!-- Start Navbar -->
     <header id="header">
         <h1>زراع</h1>
-
         <button class="menu-icon" id="openMenuBtn"><i class="bi bi-list"></i></button>
-
         <nav>
             <ul>
-                <li><a href="/index.html">الرئيسية</a></li>
+                <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#search">البحث</a></li>
                 <li><a href="#badges">الشارات</a></li>
                 <li><a href="#interactors">الترتيب</a></li>
                 <li><a href="#removeAds">إزالة الاعلانات</a></li>
-
                 <li class="dropdown">
                     <a href="#more">المزيد</a>
                     <div class="dropdown-content">
                         <a href="#about">من نحن</a>
-                        <a href="#contact">تواصل معنا</a>
+                        <a href="../contactUs/index.html">تواصل معنا</a>
+                        <a href="../aiChat/index.html">المساعد الذكي</a>
                     </div>
                 </li>
             </ul>
@@ -49,9 +36,8 @@
 
         <div class="controls-and-profile">
             <div class="header-buttons">
-                <a href="#notification">
-                    <button><i class="bi bi-bell-fill"></i></button>
-                </a>
+                <a href="#createPost"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+                <a href="#notification"><button><i class="bi bi-bell-fill"></i></button></a>
                 <button class="theme-toggle" id="themeToggle"><i class="bi bi-moon-fill"></i></button>
                 <button class="lang-button">EN</button>
             </div>
@@ -77,12 +63,13 @@
         <div class="side-menu-nav">
             <ul>
                 <li><a href="#home">الرئيسية</a></li>
-                <li><a href="/seach.html">البحث</a></li>
+                <li><a href="#search">البحث</a></li>
                 <li><a href="#badges">الشارات</a></li>
                 <li><a href="#interactors">الترتيب</a></li>
                 <li><a href="#removeAds">إزالة الاعلانات</a></li>
                 <li><a href="#about">من نحن</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="../contactUs/index.html">تواصل معنا</a></li>
+                <li><a href="../aiChat/index.html">المساعد الذكي</a></li>
             </ul>
         </div>
 
@@ -91,85 +78,49 @@
         <div class="side-menu-buttons">
             <button class="theme-toggle-phone" id="themeToggle-phone"> <i class="bi bi-moon-fill"></i> </button>
             <button class="lang-button">EN</button>
-            <a href="#notification">
-                <button><i class="bi bi-bell-fill"></i></button>
-            </a>
+            <a href="#notification"><button><i class="bi bi-bell-fill"></i></button></a>
+            <a href="#createPost"><button><i class="bi bi-plus-circle-fill"></i></button></a>
         </div>
 
     </div>
     <div class="overlay" id="menuOverlay"></div>
+    <!-- End Navbar -->
 
-    <section class="sec1">
-        <div class="main">
-            <div class="box1">
-                <h1>البحث في الأسئلة والحلول</h1>
-                <form>
-                    <input type="text" placeholder="البحث عن محصول و مشكلة و أو كلمة مفتاحية...">
-                </form>
+    <!-- 2  -->
 
-                <div class="filters">
-                    <button class="filter-btn active">معلومة</button>
-                    <button class="filter-btn active">الكل</button>
-                    <button class="filter-btn">الأحدث</button>
-                    <button class="filter-btn">الأعلى تصويتًا</button>
-                    <button class="filter-btn">الأكثر تعليقًا</button>
+<section class="sec1">
+    <div class="main">
+        <div class="box1">
+            <h1>البحث في الأسئلة والحلول</h1>
+            
+            <div class="search-wrapper">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="البحث عن محصول أو مشكلة...">
+            </div>
+            
+            <div class="filters-container">
+                <div class="dropdown-select">
+                    <select id="typeFilter">
+                        <option value="all">الكل</option>
+                        <option value="معلومة">معلومة</option>
+                        <option value="سؤال">سؤال</option>
+                    </select>
+                </div>
 
+                <div class="sort-group">
+                    <button class="filter-btn sort-btn" data-sort="newest">الأحدث</button>
+                    <button class="filter-btn sort-btn" data-sort="votes">الأعلى تصويتًا</button>
+                    <button class="filter-btn sort-btn" data-sort="comments">الأكثر تعليقًا</button>
                 </div>
             </div>
         </div>
-        <div class="box2">
-            <div class="icons">
-                <div class="ic">
-                    <i class="fa-solid fa-user"></i>
-                    <span> أحمد محمد</span>
-                </div>
-                <div class="ic">
-                    <i class="fa-solid fa-calendar"></i>
-                    <span> منذ 3 أيام</span>
-                </div>
-                <div class="ic">
-                    <i class="fa-solid fa-comment"></i>
-                    <span>10 حلول</span>
-                </div>
-                <div class="ic">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <span>55 تصويت</span>
-                </div>
-            </div>
+    </div>
 
-            <p class="par">
-                أواجة مشكلة مع ذبابة البيض في نباتات الطماطم العضوية لقد جربت المصائد الصفراء ولكن لم تنجح بشكل كامل ,
-                هل هناك حلول أخرى يمكنني تجربتها؟...
-            </p>
-            <button class="filter-btn active">عرض المزيد...</button>
+    <div id="postsContainer">
+        <p class="empty-msg">ابدأ الكتابة في شريط البحث لعرض النتائج...</p>
+    </div>
+</section>
 
-
-        </div>
-        <div class="box2">
-            <h2>
-                ما أفضل طريقة لتسميد الفلفل بشكل عضوي؟
-            </h2>
-            <p>
-                أزرع الفلفل في حديقتي المنزلية واريد استخدام اسمدة عضوية فقط. أفضل المواد التي يمكنني استخدامها ومتى
-                أضيفها؟...
-            </p>
-            <div class="icons">
-
-                <i class="fa-solid fa-user"></i>
-                <span> أحمد محمد</span>
-
-                <i class="fa-solid fa-calendar"></i>
-                <span> منذ 3 أيام</span>
-
-                <i class="fa-solid fa-comment"></i>
-                <span>10 حلول</span>
-
-                <i class="fa-solid fa-circle-check"></i>
-                <span>55 تصويت</span>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <script src="/main.js"></script>
+    <script src="./script.js"></script>
 </body>
+</html>
