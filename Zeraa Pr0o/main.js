@@ -31,11 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if(themeToggleBtnPhone) themeToggleBtnPhone.addEventListener('click', toggleFunction);
 });
 
-// --- قسم البحث والفلترة ---
+// 2
 
 const API_URL = "https://api.npoint.io/f00c01415495aba4c385";
 let allPosts = [];
-// مصفوفة لتخزين أنواع الترتيب النشطة (لتسمح باختيار أكثر من خيار)
 let activeSorts = []; 
 
 const postsContainer = document.getElementById('postsContainer');
@@ -43,7 +42,6 @@ const searchInput = document.getElementById('searchInput');
 const typeFilter = document.getElementById('typeFilter');
 const sortButtons = document.querySelectorAll('.sort-btn');
 
-// جلب البيانات
 async function fetchData() {
     try {
         const response = await fetch(API_URL);
@@ -54,7 +52,6 @@ async function fetchData() {
     }
 }
 
-// عرض الـ Skeleton
 function renderSkeleton() {
     postsContainer.innerHTML = '';
     for (let i = 0; i < 3; i++) {
@@ -72,28 +69,23 @@ function renderSkeleton() {
     }
 }
 
-// معالجة وعرض البيانات
 function renderPosts() {
     const query = searchInput.value.trim().toLowerCase();
     const selectedType = typeFilter.value;
 
-    // شرط 1: لا تظهر إلا إذا كتب المستخدم
     if (query === "") {
         postsContainer.innerHTML = '<p class="empty-msg">ابدأ الكتابة في شريط البحث لعرض النتائج...</p>';
         return;
     }
 
-    // شرط 2: فلترة حسب البحث والنوع
     let filtered = allPosts.filter(post => {
         const matchesSearch = post.content.toLowerCase().includes(query) || post.user_name.toLowerCase().includes(query);
         const matchesType = (selectedType === 'all') || (post.post_type === selectedType);
         return matchesSearch && matchesType;
     });
 
-    // الترتيب المتعدد (Multiple Sorting Logic)
     if (activeSorts.length > 0) {
         filtered.sort((a, b) => {
-            // نقوم بالترتيب بناءً على ترتيب الضغط على الأزرار
             for (let sortType of activeSorts) {
                 if (sortType === 'newest') {
                     if (b.id !== a.id) return b.id - a.id;
@@ -112,7 +104,6 @@ function renderPosts() {
         return;
     }
 
-    // عرض النتائج النهائية
     postsContainer.innerHTML = filtered.map(post => `
         <div class="box2">
             <h3 style="color: var(--text-primary-color); margin-bottom: 10px;">${post.tag}</h3>
@@ -128,7 +119,6 @@ function renderPosts() {
     `).join('');
 }
 
-// الأحداث (Listeners)
 searchInput.addEventListener('input', () => {
     renderSkeleton();
     setTimeout(renderPosts, 400); 
@@ -136,17 +126,14 @@ searchInput.addEventListener('input', () => {
 
 typeFilter.addEventListener('change', renderPosts);
 
-// تعديل أزرار الترتيب لتدعم التفعيل والإلغاء (Toggle)
 sortButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         const sortMode = btn.dataset.sort;
 
         if (btn.classList.contains('active')) {
-            // إذا كان الزر مفعل بالفعل، قم بإلغاء التفعيل وحذفه من المصفوفة
             btn.classList.remove('active');
             activeSorts = activeSorts.filter(s => s !== sortMode);
         } else {
-            // إذا لم يكن مفعل، قم بتفعيله وإضافته للمصفوفة
             btn.classList.add('active');
             activeSorts.push(sortMode);
         }
@@ -155,5 +142,5 @@ sortButtons.forEach(btn => {
     });
 });
 
-// بدء التشغيل
 fetchData();
+
