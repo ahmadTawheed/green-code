@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Code</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet"  href="style.css">
+
+</head>
+
+
+<body class="light">
+    
+  <!-- NavBar -->  
+    <header>
+
+        <h1>زراع</h1>
+       
+
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="sort.html">الترتيب</a></li>
+                <li><a href="ads.html">إزالة الاعلانات</a></li>
+                
+                <li class="dropdown">
+                    <a href="#more">المزيد</a>
+                    <div class="dropdown-content">
+                        <a href="#about">من نحن</a>
+                        <a href="#contact">تواصل معنا</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="controls-and-profile">
+            <div class="header-buttons">
+ 
+                <!--add post-->
+                <button class="add-post-btn">
+                     <i class="fa-solid fa-plus"></i>
+                     </button>
+
+
+                <!--Notification-->
+                <button>  <i class="fa-solid fa-bell"></i></button>
+
+                
+                <!--Dark & Light Mood -->
+                <button id="theme-toggle"> 
+                     <i class="fa-solid fa-moon"></i>
+                    </button>
+
+
+                 <!--profile icon-->
+               <a href="profile.html">
+                <button class="profile-btn"  id="fa-user" > 
+                  <i class="fa-solid fa-user"> </i>
+                </button>
+                </a>
+
+
+                 <button class="menu-icon" id="openMenuBtn"><i class="bi bi-list"></i></button>
+            </div>
+          
+        </div>
+
+    </header>
+
+
+
+
+
+    <!-- side menu -->
+      <div class="side-menu" id="sideMenu">
+        
+        <div class="side-menu-header">
+            <button class="close-btn" id="closeMenuBtn"><i class="bi bi-x-lg"></i></button>
+        </div>
+
+        <div class="side-menu-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541" alt="profile">
+            <span>الملف الشخصي</span>
+        </div>
+        
+        <div class="separator"></div>
+        
+        <div class="side-menu-nav">
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="#badges">الشارات</a></li>
+                <li><a href="sort.html">الترتيب</a></li>
+                <li><a href="ads.html">إزالة الاعلانات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </div>
+        
+        <div class="separator"></div>
+        
+    </div>
+    
+    <div class="overlay" id="menuOverlay"></div>
+
+<!---------------------------------------------------------------------------------------------------------------------------//-->
+
+
+<!-- Remove ADS Page -->
+  <div class="remove-ads">
+        <h1 class="remove-ads">إزالة الإعلانات </h1>
+ </div>
+
+
+
+ <!--free ads -->
+<section>
+    <div class="free-plan">
+     <i class="fa-solid fa-circle-check"></i>
+     <p>فترة مجانية لمدة 3 شهور للحسابات الجديدة .</p>
+    </div>
+</section>
+
+
+<!-- 3 cards -->
+<section class="plans-wrapper">
+
+    <div class="plan-card">
+        <div class="plan-badge">3 شهور</div>
+        <h3 class="plan-price">300 جنيه</h3>
+        <ul class="plan-features">
+             
+             <li>
+            <i class="fa-solid fa-circle-check"></i> ميزة 1
+            </li>
+
+            <li>
+          <i class="fa-solid fa-circle-check"></i> ميزة 2 
+            </li>
+         
+            <li>
+                 <i class="fa-solid fa-circle-check"></i>  ميزة 3
+            </li>
+
+            <li>
+                 <i class="fa-solid fa-circle-check"></i> ميزة 4
+            </li>
+         
+        </ul>
+        <button class="plan-btn"  onclick="openPayment()"> إشتراك </button>
+    </div>
+
+
+      <div class="plan-card">
+        <div class="plan-badge">6 شهور</div>
+        <h3 class="plan-price">500 جنيه</h3>
+        <ul class="plan-features">
+              
+             <li>
+            <i class="fa-solid fa-circle-check"></i> ميزة 1
+            </li>
+
+            <li>
+          <i class="fa-solid fa-circle-check"></i> ميزة 2 
+            </li>
+         
+            <li>
+                 <i class="fa-solid fa-circle-check"></i>  ميزة 3
+            </li>
+
+            <li>
+                 <i class="fa-solid fa-circle-check"></i> ميزة 4
+            </li>
+         
+        </ul>
+     <button class="plan-btn"  onclick="openPayment()"> إشتراك </button>
+    </div>
+
+
+
+  <div class="plan-card">
+        <div class="plan-badge">12 شهر</div>
+        <h3 class="plan-price">900 جنيه</h3>
+        
+        <ul class="plan-features">
+          
+
+            <li>
+             <li>
+            <i class="fa-solid fa-circle-check"></i> ميزة 1
+            </li>
+
+            <li>
+          <i class="fa-solid fa-circle-check"></i> ميزة 2 
+            </li>
+         
+            <li>
+                 <i class="fa-solid fa-circle-check"></i>  ميزة 3
+            </li>
+
+            <li>
+                 <i class="fa-solid fa-circle-check"></i> ميزة 4
+            </li>
+         
+        </ul>
+
+
+
+      <button class="plan-btn"  onclick="openPayment()"> إشتراك </button>
+    </div>
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+</body>
+</html>

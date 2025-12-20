@@ -1,0 +1,559 @@
+
+/* ========================================= Navbar ============================================================*/
+
+ :root {
+            --primary-color: #059669; 
+            --text-color: #263238; 
+            --bg-color-header: #ffffff; 
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --button-bg: #E4E6EB;
+            --button-hover-bg: #7bc487a5; 
+            --separator-color: #ccc; 
+         
+        }
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: "Cairo", sans-serif;
+            text-decoration: none;
+          
+        }
+
+    
+
+        /* Header - Navbar */
+        header {
+            direction: rtl;
+            width: 100%;
+            height: 80px;
+            background-color: var(--bg-color-header);
+            display:  none;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: var(--shadow-color) 0px 10px 20px, var(--shadow-color) 0px 6px 6px;
+            padding: 0 20px;
+
+        }
+
+
+
+      
+     
+
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+     
+
+
+        /* Navbar - Computer */
+        nav {
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s linear;
+            font-size: 1.2rem;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+ 
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+
+  
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            right: 0;
+            background-color: var(--bg-color-header);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 5px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-5px); 
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+
+    
+
+
+        .dropdown-content a {
+            color: var(--text-color) !important;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block !important;
+            border-bottom: none !important;
+            transition: background-color 0.3s;
+            font-size: 1rem !important;
+        }
+
+
+
+        .dropdown-content a:hover {
+            background-color: var(--button-bg);
+            color: var(--primary-color) !important;
+        }
+
+  
+
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0); 
+        }
+
+
+
+
+        /* Style for links and profile */
+        .controls-and-profile {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+        }
+
+
+
+        .profile-btn {
+            border: 2px solid var(--primary-color);
+            background-color: transparent;
+            gap: 12px;
+            
+        }
+
+
+        .profile-btn:hover {
+            background-color: var(--primary-color);
+        }
+
+        .profile-btn:hover i {
+            color: white;
+        }
+
+        
+
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+
+    
+
+
+        header button {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            background-color: var(--button-bg);
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            gap: 30px;
+        }
+
+  
+
+        /* Hover effect للأيقونات */
+.header-buttons button:hover {
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+}
+
+/* لون الأيقونة */
+.header-buttons button:hover i {
+    color: var(--primary-color);
+}
+
+
+       
+
+        
+        header button i {
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+     
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================= Profile Page ====================================================== */
+
+:root {
+    --primary-color: #059669; 
+    --text-color: #559773; 
+    --bg-color-header: #ffffff; 
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-bg: #E4E6EB;
+    --button-hover-bg: #7bc487a5; 
+    --separator-color: #ccc; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Cairo", sans-serif;
+    text-decoration: none;
+}
+
+/* ===================== Container & Card ===================== */
+.container {
+    width: 100%;
+    max-width: 1900px;
+    display: flex;
+    justify-content: center;
+    padding: 80px;
+}
+
+.auth-box {
+    background-color: white;
+    color: #107e5b;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(83, 134, 83, 0.1);
+    width: 100%;
+    max-width: 450px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease ;
+    border: 3px solid #5f9962;
+}
+
+.auth-box:hover {
+    transform: translateY(-10px) scale(1.0);
+    box-shadow: 0 20px 40px rgba(0, 100, 0, 0.2);
+}
+
+
+
+/* ================= Header inside Card ================= */
+.auth-box-header {
+    display: flex;
+    justify-content: space-between; /* كلمة زارع على اليمين والأيقونة على الشمال */
+    align-items: center;
+    padding: 20px 60px;
+    direction: rtl;
+    
+}
+
+/* كلمة زارع */
+.auth-box-header .logo-text {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+/* زر الدارك مود مع الأيقونة جواه */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--button-bg);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* أيقونة المون جوا الزر */
+.theme-toggle i {
+    position: absolute;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+/* تأثير hover على الزر */
+.theme-toggle:hover {
+    background-color: var(--button-hover-bg);
+}
+
+
+/* ===================== Form Styles ===================== */
+.profile-form {
+    padding: 40px 35px;
+    position: relative;
+    z-index: 1;
+    text-align: right;
+}
+
+h2 {
+    color: #2e7d32;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #4caf50;
+    border-radius: 2px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2e7d32;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: right;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #708370;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: #f9fdf9;
+    text-align: right;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #4caf50;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.input-group input:hover {
+    border-color: #a5d6a7;
+}
+
+.input-group input::placeholder {
+    color: #9e9e9e;
+}
+
+
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #2e7d32;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(43, 108, 47, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(43, 108, 47, 0.3);
+}
+
+.switch-auth, .switch-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+    font-size: 15px;
+}
+
+.switch-auth span, .switch-link span {
+    color: #446b46;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.switch-auth span:hover, .switch-link span:hover {
+    color: #1b5e20;
+    background-color: #e8f5e9;
+}
+
+.forgot-password {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    text-align: right;
+  
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: #2e7d32;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.forgot-password a:hover {
+    border-bottom-color: #2e7d32;
+}
+
+
+
+/* Animation for form switch */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-form {
+    animation: fadeIn 0.4s ease-out;
+}
+
+
+
+
+
+
+/* ================================== Dark Mode ================================================================ */
+
+body.dark {
+    background-color: #14141f;
+    color: #e0e0e0;
+
+    --primary-color: #438846;
+    --text-color: #e0e0e0;
+    --bg-color-header: #2b2b31;
+    --shadow-color: rgba(32, 32, 34, 0.7);
+    --button-bg: #555454;
+    --button-hover-bg: #408551;
+    --separator-color: #444444;
+}
+
+body.dark .auth-box {
+    background-color: #14141f;
+    color: #c8e6c9;
+    border: 3px solid #284d2d;
+    box-shadow: 0 10px 30px rgba(25, 94, 53, 0.6);
+}
+
+body.dark .auth-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+body.dark h2 {
+    color: #438846;
+}
+
+body.dark h2::after {
+    background-color: #376b39;
+}
+
+body.dark .input-group label {
+    color: #e1f1e2;
+}
+
+body.dark .input-group input {
+    background-color: #14141f;
+    color: #e0f2e9;
+    border: 2px solid #3d853f;
+}
+
+body.dark .input-group input::placeholder {
+    color: #9fbfb2;
+}
+
+body.dark .forgot-password a {
+    color: #81c784;
+}
+
+body.dark .forgot-password a:hover {
+    color: #a5d6a7;
+}
+
+
+
+/* Dark Mode Header */
+
+
+body.dark .auth-box-header .logo-text {
+    color: var(--primary-color);
+}
+
+body.dark .auth-box-header .theme-toggle {
+    background-color: var(--button-bg);
+}
+
+body.dark .auth-box-header .theme-toggle i {
+    color: var(--text-color);
+}
+
+body.dark .auth-box-header .theme-toggle:hover {
+    background-color: var(--button-hover-bg);
+}
+
