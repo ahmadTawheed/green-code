@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Code - البحث</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styleNavbar.css">
+    <link rel="stylesheet" href="./css/styleSearch.css">
+    <link rel="stylesheet" href="./css/skelton.css">
+</head>
+<body class="dark">
+    <!-- Start Navbar -->
+    <header id="header">
+        <h1>زراع</h1>
+        <button class="menu-icon" id="openMenuBtn"><i class="bi bi-list"></i></button>
+        <nav>
+            <ul>
+                <li><a href="../home/index.html">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="../badges/index.html">الشارات</a></li>
+                <li><a href="../arrenge/index.html">الترتيب</a></li>
+                <li><a href="../ads/index.html">إزالة الاعلانات</a></li>
+                <li class="dropdown">
+                    <a href="#more">المزيد</a>
+                    <div class="dropdown-content">
+                        <a href="../who/index.html">من نحن</a>
+                        <a href="../contactUs/index.html">تواصل معنا</a>
+                        <a href="../aiChat/index.html">المساعد الذكي</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="controls-and-profile">
+            <div class="header-buttons">
+                <a href="../posts/index.html"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+                <a href="../notification/index.html"><button><i class="bi bi-bell-fill"></i></button></a>
+                <button class="theme-toggle" id="themeToggle"><i class="bi bi-moon-fill"></i></button>
+                <button class="lang-button">EN</button>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+        </div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+
+        <div class="side-menu-header">
+            <button class="close-btn" id="closeMenuBtn"><i class="bi bi-x-lg"></i></button>
+        </div>
+
+        <div class="side-menu-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+            <span>الملف الشخصي</span>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="side-menu-nav">
+            <ul>
+                <li><a href="../home/index.html">الرئيسية</a></li>
+                <li><a href="#search">البحث</a></li>
+                <li><a href="../badges/index.html">الشارات</a></li>
+                <li><a href="../arrenge/index.html">الترتيب</a></li>
+                <li><a href="../ads/index.html">إزالة الاعلانات</a></li>
+                <li><a href="../who/index.html">من نحن</a></li>
+                <li><a href="../contactUs/index.html">تواصل معنا</a></li>
+                <li><a href="../aiChat/index.html">المساعد الذكي</a></li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="side-menu-buttons">
+            <button class="theme-toggle-phone" id="themeToggle-phone"> <i class="bi bi-moon-fill"></i> </button>
+            <button class="lang-button">EN</button>
+            <a href="../notification/index.html"><button><i class="bi bi-bell-fill"></i></button></a>
+            <a href="../posts/index.html"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+        </div>
+
+    </div>
+    <div class="overlay" id="menuOverlay"></div>
+    <!-- End Navbar -->
+
+    <!-- 2  -->
+
+<section class="sec1">
+    <div class="main">
+        <div class="box1">
+            <h1>البحث في الأسئلة والحلول</h1>
+            
+            <div class="search-wrapper">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="البحث عن محصول أو مشكلة...">
+            </div>
+            
+            <div class="filters-container">
+                <div class="dropdown-select">
+                    <select id="typeFilter">
+                        <option value="all">الكل</option>
+                        <option value="معلومة">معلومة</option>
+                        <option value="سؤال">سؤال</option>
+                    </select>
+                </div>
+
+                <div class="sort-group">
+                    <button class="filter-btn sort-btn" data-sort="newest">الأحدث</button>
+                    <button class="filter-btn sort-btn" data-sort="votes">الأعلى تصويتًا</button>
+                    <button class="filter-btn sort-btn" data-sort="comments">الأكثر تعليقًا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="postsContainer">
+        <p class="empty-msg">ابدأ الكتابة في شريط البحث لعرض النتائج...</p>
+    </div>
+</section>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

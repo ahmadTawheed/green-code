@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Cairo Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <!-- css  -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleNavbar.css">
+</head>
+
+<body>
+
+    <!-- Start Navbar -->
+    <header id="header">
+        <h1>زراع</h1>
+        <button class="menu-icon" id="openMenuBtn"><i class="bi bi-list"></i></button>
+        <nav>
+            <ul>
+                <li><a href="../home/index.html">الرئيسية</a></li>
+                <li><a href="../search/index.html">البحث</a></li>
+                <li><a href="../badges/index.html">الشارات</a></li>
+                <li><a href="../arrenge/index.html">الترتيب</a></li>
+                <li><a href="../ads/index.html">إزالة الاعلانات</a></li>
+                <li class="dropdown">
+                    <a href="#more">المزيد</a>
+                    <div class="dropdown-content">
+                        <a href="#about">من نحن</a>
+                        <a href="../contactUs/index.html">تواصل معنا</a>
+                        <a href="../aiChat/index.html">المساعد الذكي</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="controls-and-profile">
+            <div class="header-buttons">
+                <a href="../posts/index.html"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+                <a href="../notification/index.html"><button><i class="bi bi-bell-fill"></i></button></a>
+                <button class="theme-toggle" id="themeToggle"><i class="bi bi-moon-fill"></i></button>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+        </div>
+    </header>
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <button class="close-btn" id="closeMenuBtn"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="side-menu-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+                alt="profile">
+            <span>الملف الشخصي</span>
+        </div>
+        <div class="separator"></div>
+        <div class="side-menu-nav">
+            <ul>
+                <li><a href="../home/index.html">الرئيسية</a></li>
+                <li><a href="../search/index.html">البحث</a></li>
+                <li><a href="../badges/index.html">الشارات</a></li>
+                <li><a href="../arrenge/index.html">الترتيب</a></li>
+                <li><a href="../ads/index.html">إزالة الاعلانات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="../contactUs/index.html">تواصل معنا</a></li>
+                <li><a href="../aiChat/index.html">المساعد الذكي</a></li>
+            </ul>
+        </div>
+        <div class="separator"></div>
+        <div class="side-menu-buttons">
+            <button class="theme-toggle-phone" id="themeToggle-phone"> <i class="bi bi-moon-fill"></i> </button>
+            <a href="../notification/index.html"><button><i class="bi bi-bell-fill"></i></button></a>
+            <a href="../posts/index.html"><button><i class="bi bi-plus-circle-fill"></i></button></a>
+        </div>
+    </div>
+    <div class="overlay" id="menuOverlay"></div>
+    <!-- End Navbar -->
+
+    <!---------------------------------------------------------------------------------------------------------------------------//-->
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section" data-aos="fade-up">
+        <div class="container">
+            <h2>من نحن</h2>
+            <p class="about-desc">
+                نحن فريق ، مجتمع يهتم بالزراعة المستدامة والتقنيات الحديثة لدعم المزارعين
+                والهواة على حد سواء
+                هدفنا نشر المعرفة والممارسات الصحيحة للعناية بالنباتات وتحسين الإنتاج بشكل طبيعي وآمن
+            </p>
+
+            <!-- Team Members -->
+            <h2>الفريق</h2>
+            <div class="team-members">
+                <div class="team-member" data-aos="fade-right">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                        alt="Ahmed">
+                    <h3>رحمه</h3>
+                    <p>مؤسس ومطور الواجهة الأمامية</p>
+                </div>
+                <div class="team-member" data-aos="fade-up">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                        alt="Sara">
+                    <h3>أحمد توحيد</h3>
+                    <p>مصممة تجربة المستخدم UI/UX</p>
+                </div>
+                <div class="team-member" data-aos="fade-left">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                        alt="Mohamed">
+                    <h3>روان</h3>
+                    <p>مطور Back-end ومسؤول قاعدة البيانات</p>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                        alt="Esraa">
+                    <h3>إسراء الدكتور</h3>
+                    <p>مؤسس ومطور الواجهة الأمامية</p>
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="mission-vision" data-aos="fade-up">
+                <h3>رؤيتنا</h3>
+                <p>تمكين المزارعين من خلال التكنولوجيا والتعليم المستمر، وتحقيق مجتمع زراعي واعٍ وصحي</p>
+
+                <h3>مهمتنا</h3>
+                <p>تقديم محتوى موثوق، أدوات عملية، ودعم متواصل لكل من يهتم بالزراعة المستدامة</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="./js/darkMode.js"></script>
+    <script src="./js/scriptNavbar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
